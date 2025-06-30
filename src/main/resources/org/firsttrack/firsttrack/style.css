@@ -1,0 +1,41 @@
+/* Main background */
+.root {
+    -fx-background-color: #e6f1fa;
+}
+
+/* Top bar */
+.hbox {
+    -fx-background-color: #12395b;
+}
+
+/* Sidebar */
+.sidebar {
+    -fx-background-color: #12395b;
+}
+
+/* Labels */
+.label {
+    -fx-text-fill: #0b2237;
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: #006ec8;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Text fields and areas */
+.text-field, .text-area {
+    -fx-background-color: white;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 3;
+    -fx-padding: 5;
+}
+
+/* CheckBoxes and RadioButtons */
+.check-box, .radio-button {
+    -fx-text-fill: #0b2237;
+}

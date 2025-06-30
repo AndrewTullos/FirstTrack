@@ -3,7 +3,7 @@ package org.firsttrack.firsttrack;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class FirstTrackController {
     @FXML
     private Label welcomeText;
 
