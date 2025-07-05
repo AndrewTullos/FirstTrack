@@ -1,4 +1,4 @@
-package org.firsttrack.firsttrack;
+package org.firsttrack.firsttrack.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;

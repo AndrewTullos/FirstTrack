@@ -13,4 +13,6 @@ module org.firsttrack.firsttrack {
 
     opens org.firsttrack.firsttrack to javafx.fxml;
     exports org.firsttrack.firsttrack;
+    exports org.firsttrack.firsttrack.controller;
+    opens org.firsttrack.firsttrack.controller to javafx.fxml;
 }
