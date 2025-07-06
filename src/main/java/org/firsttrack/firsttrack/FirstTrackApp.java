@@ -13,7 +13,7 @@ public class FirstTrackApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 //        System.out.println(getClass().getResource("/org/firsttrack/firsttrack/usaa-logo.png"));
-        FXMLLoader fxmlLoader = new FXMLLoader(FirstTrackApp.class.getResource("/org/firsttrack/firsttrack/fxml/autofnol-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(FirstTrackApp.class.getResource("/org/firsttrack/firsttrack/fxml/main.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 900, 720);
         Image icon = new Image(getClass().getResourceAsStream("/org/firsttrack/firsttrack/usaa-logo.png"));
         stage.getIcons().add(icon);
