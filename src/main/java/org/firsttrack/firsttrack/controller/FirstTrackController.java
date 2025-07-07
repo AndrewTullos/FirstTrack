@@ -1,5 +1,6 @@
 package org.firsttrack.firsttrack.controller;
 
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,6 +9,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
 import javafx.scene.layout.BorderPane;
 
 import java.io.IOException;
@@ -21,27 +24,15 @@ public class FirstTrackController {
 //        welcomeText.setText("Welcome to JavaFX Application!");
 //    }
 
-    @FXML
-    private BorderPane mainPane;
+    @FXML private BorderPane mainPane;
+    @FXML private ImageView logo;
+    @FXML private Button resetButton;
+    @FXML private Button copyButton;
+    @FXML private Button fnolAutoButton;
+    @FXML private Button fnolPropertyButton;
+    @FXML private ScrollPane contentScrollPane;
 
-    @FXML
-    private ImageView logo;
-
-    @FXML
-    private Button resetButton;
-
-    @FXML
-    private Button copyButton;
-
-    @FXML
-    private Button fnolAutoButton;
-
-    @FXML
-    private Button fnolPropertyButton;
-
-    @FXML
-    private ScrollPane contentScrollPane;
-
+    private FnolAutoController fnolAutoController;
 
     @FXML
     private void initialize() {
@@ -50,13 +41,34 @@ public class FirstTrackController {
     }
 
     @FXML
-    protected void handleReset() {
-        System.out.println("RESET button clicked");
+    private void handleCopy() {
+        if (fnolAutoController != null) {
+            String note = fnolAutoController.generateFormattedNote();
+            ClipboardContent content = new ClipboardContent();
+            content.putString(note);
+            Clipboard.getSystemClipboard().setContent(content);
+            showAlert("Success", "Note copied to clipboard!");
+        } else {
+            showAlert("Error", "No form is loaded to copy.");
+        }
     }
 
     @FXML
-    protected void handleCopy() {
-        System.out.println("COPY button clicked");
+    private void handleReset() {
+        if (fnolAutoController != null) {
+            fnolAutoController.resetForm();
+            showAlert("Success", "Form has been reset.");
+        } else {
+            showAlert("Error", "No form is loaded to reset.");
+        }
+    }
+
+    private void showAlert(String title, String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 
     @FXML
@@ -65,6 +77,7 @@ public class FirstTrackController {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/firsttrack/firsttrack/fxml/fnol_auto.fxml"));
             contentScrollPane.setContent(loader.load());
+            fnolAutoController = loader.getController();
         } catch (IOException e) {
             e.printStackTrace();
             System.err.println("Failed to load fnol_auto.fxml: " + e.getMessage());

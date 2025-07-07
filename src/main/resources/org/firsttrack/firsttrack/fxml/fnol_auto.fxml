@@ -8,6 +8,7 @@
 
     <!-- Declare ToggleGroups -->
     <fx:define>
+        <ToggleGroup fx:id="contactGroup" />
         <ToggleGroup fx:id="reasonGroup" />
         <ToggleGroup fx:id="textPermissionGroup" />
         <ToggleGroup fx:id="acGroup" />
@@ -27,7 +28,12 @@
 
                     <!-- Preferred Method of Contact -->
                     <Label text="Preferred method of contact:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
-                    <TextField fx:id="preferredContactField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+                    <HBox spacing="10.0">
+                        <RadioButton fx:id="phoneRadio" text="Phone" toggleGroup="$contactGroup" style="-fx-text-fill: #0b2237;" />
+                        <RadioButton fx:id="emailRadio" text="Email" toggleGroup="$contactGroup" style="-fx-text-fill: #0b2237;" />
+                        <RadioButton fx:id="otherContactRadio" text="Other" toggleGroup="$contactGroup" style="-fx-text-fill: #0b2237;" />
+                        <TextField fx:id="otherContactText" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+                    </HBox>
 
                     <!-- Facts of Loss -->
                     <Label text="Facts of Loss:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
