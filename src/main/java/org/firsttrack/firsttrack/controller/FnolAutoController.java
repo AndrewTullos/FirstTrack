@@ -49,7 +49,7 @@ public class FnolAutoController {
     public String generateFormattedNote() {
         StringBuilder note = new StringBuilder();
 
-        note.append("************************ FNOL AUTO ************************").append(spokeWithField.getText());
+        note.append("************************ FNOL AUTO ************************\n\n").append(spokeWithField.getText());
 
         note.append("Spoke with: ").append(spokeWithField.getText().trim()).append("\n");
         note.append("Preferred method of contact: ");
@@ -79,21 +79,21 @@ public class FnolAutoController {
 
         note.append("System Determined Coverage(s) Advised: ");
         StringBuilder coverages = new StringBuilder();
-        if (collisionCheck.isSelected()) coverages.append("Collision - deductible, ");
-        if (comprehensiveCheck.isSelected()) coverages.append("Comprehensive - deductible, ");
-        if (rrCheck.isSelected()) coverages.append("RR, ");
-        if (teCheck.isSelected()) coverages.append("TE, ");
+        if (collisionCheck.isSelected()) coverages.append("Collision - deductible: ");
+        if (comprehensiveCheck.isSelected()) coverages.append("Comprehensive - deductible: ");
+        if (rrCheck.isSelected()) coverages.append("RR: ");
+        if (teCheck.isSelected()) coverages.append("TE: ");
         note.append(coverages.length() > 0 ? coverages.substring(0, coverages.length() - 2) : "None").append("\n");
 
         note.append("Advised of Service Expectations: ");
         StringBuilder services = new StringBuilder();
-        if (drpCheck.isSelected()) services.append("DRP, ");
-        if (driveInCheck.isSelected()) services.append("Drive In - deductible, ");
-        if (photoCheck.isSelected()) services.append("Photo, ");
-        if (appraiserCheck.isSelected()) services.append("Appraiser, ");
-        if (tleCheck.isSelected()) services.append("TLE, ");
-        if (socCheck.isSelected()) services.append("SOC, ");
-        if (rentalCheck.isSelected()) services.append("Rental, ");
+        if (drpCheck.isSelected()) services.append("DRP - CTC W/in 1 business day, lifetime warranty, ded. pay to shop, set up inspection and repair.");
+        if (driveInCheck.isSelected()) services.append("Drive In - Confirm appointment, 30 min will inspect and provide est to member and USAA; member can repair with drive in or go to SOC; provide estimate to SOC to follow approved repairs and supplemental process. ");
+        if (photoCheck.isSelected()) services.append("Photo estimate - Link will be sent via text, access link and upload photos - appraiser will review and create estimate; will be sent to adjuster - adjuster to provide to member; member to provide the estimate to their preferred shop. ");
+        if (appraiserCheck.isSelected()) services.append("Appraiser - Contact within 5 business days; may be virtual - not guaranteed an in-person inspection = appraiser will contact member after inspection completed to provide estimate and go over estimate and next steps.");
+        if (tleCheck.isSelected()) services.append("TLE - Move vehhicle to inspection station for appraisal, provider will contact to coordinate tow, ensure the vehicle is release from facility (attempt 3-way call) approximately 7-10 days for the inspection to be completed and follow up with the member.");
+        if (socCheck.isSelected()) services.append("SOC - Provide USAA est to shop; SOC not to start repairs until the USAA estimate is completed. USAA will pay initial payment to member. Shop to follow directions on estimate for supplements. USAA does not gurantee work from shops outside of network.");
+        if (rentalCheck.isSelected()) services.append("Rental - No GMI/T, RTO, follow up with shop to confirm rental being extended. Enterprise will contact to confirm reservation and time needed. Deposit may be required, returned when vehilce returned, inspect for prior damage(\"... take photos, it's what I do\").");
         if (noServicesCheck.isSelected()) {
             services.append("No services set");
             if (!noServicesReason.getText().trim().isEmpty()) {
