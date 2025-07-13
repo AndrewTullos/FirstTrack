@@ -60,7 +60,6 @@
                     <VBox spacing="5.0">
                         <CheckBox fx:id="collisionCheck" text="Collision - deductible" style="-fx-text-fill: #0b2237;" />
                         <TextField fx:id="collisionDeductibleField" promptText="Deductible Amount"/>
-
                         <CheckBox fx:id="comprehensiveCheck" text="Comprehensive - deductible" style="-fx-text-fill: #0b2237;" />
                         <TextField fx:id="comprehensiveDeductibleField" promptText="Deductible Amount"/>
 
@@ -101,10 +100,14 @@
                     <TextArea fx:id="serviceExpectationsArea"
                               editable="false"
                               wrapText="true"
+                              focusTraversable="false"
                               prefHeight="120.0"
-                              style="-fx-background-color: #f4f4f4; -fx-text-fill: #0b2237;" />
+                              styleClass="auto-generated-text"
+                              style="-fx-background-color: transparent; -fx-control-inner-background: transparent; -fx-border-color: transparent; -fx-focus-color: transparent; -fx-faint-focus-color: transparent; -fx-text-fill: #0b2237" />
 
-                    <Label text="Additional:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+
+
+                    <Label text="Additional Expectations Set:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
                     <TextArea fx:id="nextStepsArea" prefHeight="80.0" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
 
                     <!-- Caller Advised -->

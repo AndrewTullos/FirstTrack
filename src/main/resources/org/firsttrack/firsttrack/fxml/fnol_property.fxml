@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 
 <BorderPane xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="org.firsttrack.firsttrack.controller.FnolAutoController">
+            fx:controller="org.firsttrack.firsttrack.controller.FnolPropertyController">
 
     <!-- Declare ToggleGroups -->
     <fx:define>

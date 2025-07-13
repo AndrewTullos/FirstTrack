@@ -27,15 +27,34 @@
     -fx-font-weight: bold;
 }
 
-/* Text fields and areas */
+/* Text fields and areas (default editable style) */
 .text-field, .text-area {
     -fx-background-color: white;
-    -fx-border-color: #ccc;
+    -fx土地-border-color: #ccc;
     -fx-border-radius: 3;
     -fx-padding: 5;
 }
 
+
 /* CheckBoxes and RadioButtons */
 .check-box, .radio-button {
     -fx-text-fill: #0b2237;
+}
+
+/* Non-editable TextArea to blend with background */
+.text-area.auto-generated-text,
+.text-area:readonly.auto-generated-text {
+    -fx-background-color: transparent;
+    -fx-control-inner-background: transparent;
+    -fx-border-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.text-area.auto-generated-text .content {
+    -fx-background-color: transparent;
 }

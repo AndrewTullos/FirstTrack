@@ -1,7 +1,6 @@
 package org.firsttrack.firsttrack.controller;
 
 import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,13 +15,6 @@ import javafx.scene.layout.BorderPane;
 import java.io.IOException;
 
 public class FirstTrackController {
-//    @FXML
-//    private Label welcomeText;
-
-//    @FXML
-//    protected void onHelloButtonClick() {
-//        welcomeText.setText("Welcome to JavaFX Application!");
-//    }
 
     @FXML private BorderPane mainPane;
     @FXML private ImageView logo;
@@ -38,6 +30,7 @@ public class FirstTrackController {
     private void initialize() {
         Image image = new Image(getClass().getResource("/org/firsttrack/firsttrack/usaa-logo.png").toExternalForm());
         logo.setImage(image);
+        loadStart();
     }
 
     @FXML
@@ -71,9 +64,22 @@ public class FirstTrackController {
         alert.showAndWait();
     }
 
+
+    @FXML
+    protected void loadStart() {
+//        System.out.println("FNOL AUTO button clicked");
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/firsttrack/firsttrack/fxml/loading.fxml"));
+            contentScrollPane.setContent(loader.load());
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("Failed to load fnol_auto.fxml: " + e.getMessage());
+        }
+    }
+
     @FXML
     protected void loadFnolAuto() {
-        System.out.println("FNOL AUTO button clicked");
+//        System.out.println("FNOL AUTO button clicked");
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/firsttrack/firsttrack/fxml/fnol_auto.fxml"));
             contentScrollPane.setContent(loader.load());
@@ -86,7 +92,7 @@ public class FirstTrackController {
 
     @FXML
     protected void loadFnolProperty(ActionEvent event) {
-        System.out.println("FNOL PROPERTY button clicked");
+//        System.out.println("FNOL PROPERTY button clicked");
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/firsttrack/firsttrack/fxml/fnol_property.fxml"));
             contentScrollPane.setContent(loader.load());
