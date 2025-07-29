@@ -14,7 +14,9 @@ import javafx.scene.layout.BorderPane;
 
 import java.io.IOException;
 
-public class FirstTrackController {
+
+
+public class OnTrackController {
 
     @FXML private BorderPane mainPane;
     @FXML private ImageView logo;
@@ -24,7 +26,7 @@ public class FirstTrackController {
     @FXML private Button fnolPropertyButton;
     @FXML private ScrollPane contentScrollPane;
 
-    private FnolAutoController fnolAutoController;
+    private NoteFormController currentFormController;
 
     @FXML
     private void initialize() {
@@ -35,8 +37,8 @@ public class FirstTrackController {
 
     @FXML
     private void handleCopy() {
-        if (fnolAutoController != null) {
-            String note = fnolAutoController.generateFormattedNote();
+        if (currentFormController != null) {
+            String note = currentFormController.generateFormattedNote();
             ClipboardContent content = new ClipboardContent();
             content.putString(note);
             Clipboard.getSystemClipboard().setContent(content);
@@ -48,13 +50,20 @@ public class FirstTrackController {
 
     @FXML
     private void handleReset() {
-        if (fnolAutoController != null) {
-            fnolAutoController.resetForm();
+        if (currentFormController != null) {
+            currentFormController.resetForm();
             showAlert("Success", "Form has been reset.");
         } else {
             showAlert("Error", "No form is loaded to reset.");
         }
     }
+
+
+//    Alert confirm = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to reset?", ButtonType.YES, ButtonType.NO);
+//        confirm.showAndWait().ifPresent(response -> {
+//        if (response == ButtonType.YES) fnolAutoController.resetForm();
+//    });
+
 
     private void showAlert(String title, String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -83,7 +92,20 @@ public class FirstTrackController {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/firsttrack/firsttrack/fxml/fnol_auto.fxml"));
             contentScrollPane.setContent(loader.load());
-            fnolAutoController = loader.getController();
+            currentFormController = loader.getController();
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("Failed to load fnol_auto.fxml: " + e.getMessage());
+        }
+    }
+
+    @FXML
+    protected void loadFnolAutoStatus() {
+//        System.out.println("FNOL AUTO button clicked");
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/firsttrack/firsttrack/fxml/fnol_auto_status.fxml"));
+            contentScrollPane.setContent(loader.load());
+            currentFormController = loader.getController();
         } catch (IOException e) {
             e.printStackTrace();
             System.err.println("Failed to load fnol_auto.fxml: " + e.getMessage());
@@ -92,13 +114,13 @@ public class FirstTrackController {
 
     @FXML
     protected void loadFnolProperty(ActionEvent event) {
-//        System.out.println("FNOL PROPERTY button clicked");
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/firsttrack/firsttrack/fxml/fnol_property.fxml"));
             contentScrollPane.setContent(loader.load());
+            currentFormController = loader.getController();
         } catch (IOException e) {
             e.printStackTrace();
-            System.err.println("Failed to load fnol_auto.fxml: " + e.getMessage());
         }
     }
+
 }

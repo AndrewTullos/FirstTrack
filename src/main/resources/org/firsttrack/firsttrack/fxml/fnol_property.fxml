@@ -8,6 +8,7 @@
 
     <!-- Declare ToggleGroups -->
     <fx:define>
+        <ToggleGroup fx:id="contactGroup" />
         <ToggleGroup fx:id="reasonGroup" />
         <ToggleGroup fx:id="textPermissionGroup" />
         <ToggleGroup fx:id="acGroup" />
@@ -26,22 +27,45 @@
                     <Label text="Spoke with:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
                     <TextField fx:id="spokeWithField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
 
-<!--                    &lt;!&ndash; Preferred Method of Contact &ndash;&gt;-->
-<!--                    <Label text="Preferred method of contact:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />-->
-<!--                    <TextField fx:id="preferredContactField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />-->
+                    <!-- Preferred Method of Contact -->
+                    <Label text="Preferred method of contact:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                    <HBox spacing="10.0">
+                        <RadioButton fx:id="phoneRadio" text="Phone" toggleGroup="$contactGroup" style="-fx-text-fill: #0b2237;" />
+                        <RadioButton fx:id="emailRadio" text="Email" toggleGroup="$contactGroup" style="-fx-text-fill: #0b2237;" />
+                        <RadioButton fx:id="otherContactRadio" text="Other" toggleGroup="$contactGroup" style="-fx-text-fill: #0b2237;" />
+                        <TextField fx:id="otherContactText" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+                    </HBox>
 
-<!--                    &lt;!&ndash; Facts of Loss &ndash;&gt;-->
-<!--                    <Label text="Facts of Loss:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />-->
-<!--                    <TextArea fx:id="factsOfLossArea" prefHeight="100.0" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />-->
+                    <!-- Facts of Loss -->
+                    <Label text="Facts of Loss:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                    <TextArea fx:id="factsOfLossArea" prefHeight="100.0" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
 
-<!--                    &lt;!&ndash; Reason of Use &ndash;&gt;-->
-<!--                    <Label text="Reason of use at time of loss/incident:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />-->
-<!--                    <HBox spacing="10.0">-->
-<!--                        <RadioButton fx:id="personalRadio" text="Personal" toggleGroup="$reasonGroup" style="-fx-text-fill: #0b2237;" />-->
-<!--                        <RadioButton fx:id="businessRadio" text="Business" toggleGroup="$reasonGroup" style="-fx-text-fill: #0b2237;" />-->
-<!--                        <RadioButton fx:id="otherRadio" text="Other" toggleGroup="$reasonGroup" style="-fx-text-fill: #0b2237;" />-->
-<!--                        <TextField fx:id="otherReasonText" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />-->
-<!--                    </HBox>-->
+
+                    <!-- Vendor Name -->
+                    <Label text="Vendor Name: " style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                    <TextField fx:id="vendorName" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+
+                    <!-- Advised -->
+                    <Label text="Advised: " style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                    <TextField fx:id="advised" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+
+                    <!-- Subrogation -->
+                    <Label text="Subrogation: " style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                    <TextField fx:id="subrogation" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+
+                    <!-- Mortgagee -->
+                    <Label text="Who is the current Mortgagee: " style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                    <TextField fx:id="mortgagee" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+
+
+                    <!-- Reason of Use -->
+                    <Label text="Payment Preference: " style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                    <HBox spacing="10.0">
+                        <RadioButton fx:id="checkRadio" text="Personal" toggleGroup="$reasonGroup" style="-fx-text-fill: #0b2237;" />
+                        <RadioButton fx:id="eftRadio" text="Business" toggleGroup="$reasonGroup" style="-fx-text-fill: #0b2237;" />
+                        <RadioButton fx:id="otherRadio" text="Other" toggleGroup="$reasonGroup" style="-fx-text-fill: #0b2237;" />
+                        <TextField fx:id="otherReasonText" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+                    </HBox>
 
 <!--                    &lt;!&ndash; Permission to Text &ndash;&gt;-->
 <!--                    <Label text="Permission granted to text:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />-->

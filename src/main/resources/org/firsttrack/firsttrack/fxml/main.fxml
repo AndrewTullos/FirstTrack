@@ -4,7 +4,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane fx:id="mainPane" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" style="-fx-background-color: #e6f1fa;" fx:controller="org.firsttrack.firsttrack.controller.FirstTrackController">
+<BorderPane fx:id="mainPane" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" style="-fx-background-color: #e6f1fa;" fx:controller="org.firsttrack.firsttrack.controller.OnTrackController">
     <!--    Top Section-->
     <top>
         <HBox style="-fx-background-color: #12395b;" spacing="10.0">
@@ -26,6 +26,7 @@
             <children>
                 <Label text="Menu" style="-fx-text-fill: #ffffff; -fx-font-size: 16px; -fx-font-weight: bold;" />
                 <Button fx:id="fnolAutoButton" text="FNOL AUTO" onAction="#loadFnolAuto" style="-fx-background-color: #006ec8; -fx-text-fill: #ffffff;" prefWidth="Infinity" />
+                <Button fx:id="fnolAutoStatusButton" text="FNOL AUTO STATUS" onAction="#loadFnolAutoStatus" style="-fx-background-color: #006ec8; -fx-text-fill: #ffffff;" prefWidth="Infinity" />
                 <Button fx:id="fnolPropertyButton" text="FNOL PROPERTY" onAction="#loadFnolProperty" style="-fx-background-color: #006ec8; -fx-text-fill: #ffffff;" prefWidth="Infinity" />
             </children>
             <padding>

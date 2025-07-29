@@ -1,10 +1,13 @@
 package org.firsttrack.firsttrack.controller;
 
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.collections.ObservableList;
 
-public class FnolAutoController implements NoteFormController {
+
+public class FnolAutoStatusController {
 
     @FXML private TextField spokeWithField;
     @FXML private RadioButton phoneRadio;
@@ -41,6 +44,22 @@ public class FnolAutoController implements NoteFormController {
     @FXML private TextArea serviceExpectationsArea;
     @FXML private TextArea nextStepsArea;
     @FXML private TextArea callerAdvisedArea;
+
+    @FXML
+    private ComboBox<String> fnolStatusComboBox;
+
+    @FXML
+    public void handleComboBoxSelection(ActionEvent event) {
+        ObservableList<String> items = FXCollections.observableArrayList(
+                "Attorney", "Medical Provider", "Adverse Carrier", "Repair Facility", "Claimant"
+        );
+        fnolStatusComboBox.setItems(items);
+
+        fnolStatusComboBox.valueProperty().addListener((obs, oldValue, newValue) -> {
+            System.out.println("Selected: " + newValue);
+        });
+    }
+
 
     @FXML
     public void initialize() {
@@ -99,7 +118,6 @@ public class FnolAutoController implements NoteFormController {
         serviceExpectationsArea.setText(summary.toString());
     }
 
-    @Override
     public String generateFormattedNote() {
         StringBuilder note = new StringBuilder();
 
@@ -145,13 +163,13 @@ public class FnolAutoController implements NoteFormController {
         // To do add logic to give dedcitble boxes
         if (collisionCheck.isSelected()) {
             String deductible = collisionDeductibleField.getText().trim();
-            coverages.append("Collision - deductible: $")
+            coverages.append("Collision - deductible: ")
                     .append(deductible.isEmpty() ? "N/A" : deductible)
                     .append("; ");
         }
         if (comprehensiveCheck.isSelected()) {
             String deductible = comprehensiveDeductibleField.getText().trim();
-            coverages.append("Comprehensive - deductible: $")
+            coverages.append("Comprehensive - deductible: ")
                     .append(deductible.isEmpty() ? "N/A" : deductible)
                     .append("; ");
         };
@@ -206,7 +224,7 @@ public class FnolAutoController implements NoteFormController {
     }
 
 
-    @Override
+
     public void resetForm() {
         spokeWithField.clear();
         phoneRadio.setSelected(false);
@@ -242,6 +260,5 @@ public class FnolAutoController implements NoteFormController {
         nextStepsArea.clear();
         callerAdvisedArea.clear();
     }
-
 
 }

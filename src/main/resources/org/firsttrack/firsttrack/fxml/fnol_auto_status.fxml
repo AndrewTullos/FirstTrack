@@ -3,8 +3,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+
+
 <BorderPane xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="org.firsttrack.firsttrack.controller.FnolAutoController">
+            fx:controller="org.firsttrack.firsttrack.controller.FnolAutoStatusController">
+
 
     <!-- Declare ToggleGroups -->
     <fx:define>
@@ -21,6 +24,10 @@
                     <padding>
                         <Insets top="20" right="20" bottom="20" left="20" />
                     </padding>
+
+                    <!-- Template Selection -->
+                    <ComboBox fx:id="fnolStatusComboBox" prefWidth="150.0" onAction="#handleComboBoxSelection"/>
+
 
                     <!-- Spoke With -->
                     <Label text="Spoke with:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
