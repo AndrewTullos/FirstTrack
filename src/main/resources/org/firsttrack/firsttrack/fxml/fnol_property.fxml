@@ -51,20 +51,26 @@
 
                     <!-- Subrogation -->
                     <Label text="Subrogation: " style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
-                    <TextField fx:id="subrogation" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+                    <HBox spacing="10.0">
+                        <RadioButton fx:id="yesSubro" text="Yes" toggleGroup="$reasonGroup" style="-fx-text-fill: #0b2237;" />
+                        <RadioButton fx:id="noSubro" text="No" toggleGroup="$reasonGroup" style="-fx-text-fill: #0b2237;" />
+                        <RadioButton fx:id="otherSubro" text="Other" toggleGroup="$reasonGroup" style="-fx-text-fill: #0b2237;" />
+                        <TextField fx:id="otherSubroText" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+                    </HBox>
+
 
                     <!-- Mortgagee -->
                     <Label text="Who is the current Mortgagee: " style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
                     <TextField fx:id="mortgagee" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
 
 
-                    <!-- Reason of Use -->
+                    <!-- Payment Preference -->
                     <Label text="Payment Preference: " style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
                     <HBox spacing="10.0">
-                        <RadioButton fx:id="checkRadio" text="Personal" toggleGroup="$reasonGroup" style="-fx-text-fill: #0b2237;" />
-                        <RadioButton fx:id="eftRadio" text="Business" toggleGroup="$reasonGroup" style="-fx-text-fill: #0b2237;" />
-                        <RadioButton fx:id="otherRadio" text="Other" toggleGroup="$reasonGroup" style="-fx-text-fill: #0b2237;" />
-                        <TextField fx:id="otherReasonText" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+                        <RadioButton fx:id="checkRadio" text="Check" toggleGroup="$reasonGroup" style="-fx-text-fill: #0b2237;" />
+                        <RadioButton fx:id="eftRadio" text="EFT" toggleGroup="$reasonGroup" style="-fx-text-fill: #0b2237;" />
+<!--                        <RadioButton fx:id="otherRadio" text="Other" toggleGroup="$reasonGroup" style="-fx-text-fill: #0b2237;" />-->
+<!--                        <TextField fx:id="otherReasonText" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />-->
                     </HBox>
 
 <!--                    &lt;!&ndash; Permission to Text &ndash;&gt;-->
