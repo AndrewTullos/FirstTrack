@@ -75,31 +75,26 @@
                         <!-- Medical Provider Fields -->
                         <VBox fx:id="medicalFields" spacing="10.0" visible="false" managed="false">
 
-                            <Label text="Spoke With:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
-                            <TextField fx:id="medicalProviderSpokeWithField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+                            <Label text="Caller: " style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                            <TextField fx:id="medicalCallerField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
 
-                            <Label text="Firm Name:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
-                            <TextField fx:id="medicalProviderFirmNameField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+                            <Label text="Reason for Call: " style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                            <TextField fx:id="medicalReasonField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
 
-                            <Label text="Contact Person:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
-                            <TextField fx:id="medicalProviderContactField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+                            <Label text="Updated all callers information missing: " style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                            <TextField fx:id="medicalInformationField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
 
-                            <Label text="Address:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
-                            <TextField fx:id="medicalProviderAddressField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+                            <Label text="Confirmed Has Adjuster Contact Information: " style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                            <TextField fx:id="medicalProviderAdjusterField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
 
-                            <Label text="Fax Number:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
-                            <TextField fx:id="medicalProviderFaxNumberField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+                            <Label text="Actions Taken: " style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                            <TextField fx:id="medicalProviderActionsTakenField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
 
-                            <Label text="Telephone Number:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
-                            <TextField fx:id="medicalProviderPhoneNumberField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+                            <Label text="Next Steps Advised: " style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                            <TextField fx:id="medicalProviderNextStepsField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
 
-                            <Label text="Email:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
-                            <TextField fx:id="medicalProviderEmailField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
 
-                            <Label text="Tax ID:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
-                            <TextField fx:id="medicalProviderTaxIdField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
-
-                            <Label text="Notes:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                            <Label text="Other Notes: " style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
                             <TextArea fx:id="medicalProviderGeneralNoteField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
                         </VBox>
 

@@ -30,14 +30,12 @@ public class FnolAutoStatusController implements NoteFormController {
     @FXML private TextArea attorneyGeneralNoteField;
 
 //    Medical Provider VBOX
-    @FXML private TextField medicalProviderSpokeWithField;
-    @FXML private TextField medicalProviderFirmNameField;
-    @FXML private TextField medicalProviderContactField;
-    @FXML private TextField medicalProviderAddressField;
-    @FXML private TextField medicalProviderFaxNumberField;
-    @FXML private TextField medicalProviderPhoneNumberField;
-    @FXML private TextField medicalProviderEmailField;
-    @FXML private TextField medicalProviderTaxIdField;
+    @FXML private TextField medicalCallerField;
+    @FXML private TextField medicalReasonField;
+    @FXML private TextField medicalInformationField;
+    @FXML private TextField medicalProviderAdjusterField;
+    @FXML private TextField medicalProviderActionsTakenField;
+    @FXML private TextField medicalProviderNextStepsField;
     @FXML private TextArea medicalProviderGeneralNoteField;
 
     @FXML
@@ -108,29 +106,24 @@ public class FnolAutoStatusController implements NoteFormController {
 
 
         } else if ("Medical Provider".equals(fnolType)) {
-            note.append("Spoke With: ").append(medicalProviderSpokeWithField.getText().trim()).append("\n");
+            note.append("Spoke With: ").append(medicalCallerField.getText().trim()).append("\n");
             note.append("\n");
 
-            note.append("Firm Name: ").append(medicalProviderFirmNameField.getText().trim()).append("\n");
+            note.append("Firm Name: ").append(medicalReasonField.getText().trim()).append("\n");
             note.append("\n");
 
-            note.append("Contact Person: ").append(medicalProviderContactField.getText().trim()).append("\n");
+            note.append("Contact Person: ").append(medicalInformationField.getText().trim()).append("\n");
             note.append("\n");
 
-            note.append("Address: ").append(medicalProviderAddressField.getText().trim()).append("\n");
+            note.append("Address: ").append(medicalProviderAdjusterField.getText().trim()).append("\n");
             note.append("\n");
 
-            note.append("Fax Number: ").append(medicalProviderFaxNumberField.getText().trim()).append("\n");
+            note.append("Fax Number: ").append(medicalProviderActionsTakenField.getText().trim()).append("\n");
             note.append("\n");
 
-            note.append("Telephone Number: ").append(medicalProviderPhoneNumberField.getText().trim()).append("\n");
+            note.append("Telephone Number: ").append(medicalProviderNextStepsField.getText().trim()).append("\n");
             note.append("\n");
 
-            note.append("Email: ").append(medicalProviderEmailField.getText().trim()).append("\n");
-            note.append("\n");
-
-            note.append("Tax ID: ").append(medicalProviderTaxIdField.getText().trim()).append("\n");
-            note.append("\n");
 
             note.append("Notes: ").append(medicalProviderGeneralNoteField.getText().trim()).append("\n");
             note.append("\n");
@@ -164,14 +157,12 @@ public class FnolAutoStatusController implements NoteFormController {
         attorneyGeneralNoteField.clear();
 
 //        MEDICAL CLEAR
-        medicalProviderSpokeWithField.clear();
-        medicalProviderFirmNameField.clear();
-        medicalProviderContactField.clear();
-        medicalProviderAddressField.clear();
-        medicalProviderFaxNumberField.clear();
-        medicalProviderPhoneNumberField.clear();
-        medicalProviderEmailField.clear();
-        medicalProviderTaxIdField.clear();
+        medicalCallerField.clear();
+        medicalReasonField.clear();
+        medicalInformationField.clear();
+        medicalProviderAdjusterField.clear();
+        medicalProviderActionsTakenField.clear();
+        medicalProviderNextStepsField.clear();
         medicalProviderGeneralNoteField.clear();
     }
 }
