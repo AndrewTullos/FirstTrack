@@ -8,10 +8,10 @@
 
     <!-- Declare ToggleGroups -->
     <fx:define>
-        <ToggleGroup fx:id="contactGroup" />
-        <ToggleGroup fx:id="reasonGroup" />
-        <ToggleGroup fx:id="textPermissionGroup" />
-        <ToggleGroup fx:id="acGroup" />
+        <ToggleGroup fx:id="contactGroup"/>
+        <ToggleGroup fx:id="reasonGroup"/>
+        <ToggleGroup fx:id="textPermissionGroup"/>
+        <ToggleGroup fx:id="acGroup"/>
     </fx:define>
 
     <center>
@@ -19,99 +19,118 @@
             <content>
                 <VBox spacing="15.0" style="-fx-background-color: #e6f1fa;" alignment="TOP_LEFT">
                     <padding>
-                        <Insets top="20" right="20" bottom="20" left="20" />
+                        <Insets top="20" right="20" bottom="20" left="20"/>
                     </padding>
 
                     <!-- Spoke With -->
-                    <Label text="Spoke with:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
-                    <TextField fx:id="spokeWithField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+                    <Label text="AUTO FNOL" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                    <Label text="Spoke with:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;"/>
+                    <TextField fx:id="spokeWithField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;"/>
 
                     <!-- Preferred Method of Contact -->
-                    <Label text="Preferred method of contact:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                    <Label text="Preferred method of contact:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;"/>
                     <HBox spacing="10.0">
-                        <RadioButton fx:id="phoneRadio" text="Phone" toggleGroup="$contactGroup" style="-fx-text-fill: #0b2237;" />
-                        <RadioButton fx:id="emailRadio" text="Email" toggleGroup="$contactGroup" style="-fx-text-fill: #0b2237;" />
-                        <RadioButton fx:id="otherContactRadio" text="Other" toggleGroup="$contactGroup" style="-fx-text-fill: #0b2237;" />
-                        <TextField fx:id="otherContactText" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+                        <RadioButton fx:id="phoneRadio" text="Phone" toggleGroup="$contactGroup"
+                                     style="-fx-text-fill: #0b2237;"/>
+                        <RadioButton fx:id="emailRadio" text="Email" toggleGroup="$contactGroup"
+                                     style="-fx-text-fill: #0b2237;"/>
+                        <RadioButton fx:id="otherContactRadio" text="Other" toggleGroup="$contactGroup"
+                                     style="-fx-text-fill: #0b2237;"/>
+                        <TextField fx:id="otherContactText"
+                                   style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;"/>
                     </HBox>
 
                     <!-- Facts of Loss -->
-                    <Label text="Facts of Loss:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
-                    <TextArea fx:id="factsOfLossArea" prefHeight="100.0" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+                    <Label text="Facts of Loss:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;"/>
+                    <TextArea fx:id="factsOfLossArea" prefHeight="100.0"
+                              style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;"/>
 
                     <!-- Reason of Use -->
-                    <Label text="Reason of use at time of loss/incident:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                    <Label text="Reason of use at time of loss/incident:"
+                           style="-fx-text-fill: #0b2237; -fx-font-weight: bold;"/>
                     <HBox spacing="10.0">
-                        <RadioButton fx:id="personalRadio" text="Personal" toggleGroup="$reasonGroup" style="-fx-text-fill: #0b2237;" />
-                        <RadioButton fx:id="businessRadio" text="Business" toggleGroup="$reasonGroup" style="-fx-text-fill: #0b2237;" />
-                        <RadioButton fx:id="otherRadio" text="Other" toggleGroup="$reasonGroup" style="-fx-text-fill: #0b2237;" />
-                        <TextField fx:id="otherReasonText" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+                        <RadioButton fx:id="personalRadio" text="Personal" toggleGroup="$reasonGroup"
+                                     style="-fx-text-fill: #0b2237;"/>
+                        <RadioButton fx:id="businessRadio" text="Business" toggleGroup="$reasonGroup"
+                                     style="-fx-text-fill: #0b2237;"/>
+                        <RadioButton fx:id="otherRadio" text="Other" toggleGroup="$reasonGroup"
+                                     style="-fx-text-fill: #0b2237;"/>
+                        <TextField fx:id="otherReasonText"
+                                   style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;"/>
                     </HBox>
 
                     <!-- Permission to Text -->
-                    <Label text="Permission granted to text:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                    <Label text="Permission granted to text:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;"/>
                     <HBox spacing="10.0">
-                        <RadioButton fx:id="textYes" text="Yes" toggleGroup="$textPermissionGroup" style="-fx-text-fill: #0b2237;" />
-                        <RadioButton fx:id="textNo" text="No" toggleGroup="$textPermissionGroup" style="-fx-text-fill: #0b2237;" />
+                        <RadioButton fx:id="textYes" text="Yes" toggleGroup="$textPermissionGroup"
+                                     style="-fx-text-fill: #0b2237;"/>
+                        <RadioButton fx:id="textNo" text="No" toggleGroup="$textPermissionGroup"
+                                     style="-fx-text-fill: #0b2237;"/>
                     </HBox>
 
                     <!-- System Determined Coverage -->
-                    <Label text="System Determined Coverage(s) Advised:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                    <Label text="System Determined Coverage(s) Advised:"
+                           style="-fx-text-fill: #0b2237; -fx-font-weight: bold;"/>
                     <VBox spacing="5.0">
-                        <CheckBox fx:id="collisionCheck" text="Collision - deductible" style="-fx-text-fill: #0b2237;" />
+                        <CheckBox fx:id="collisionCheck" text="Collision - deductible" style="-fx-text-fill: #0b2237;"/>
                         <TextField fx:id="collisionDeductibleField" promptText="Deductible Amount"/>
-                        <CheckBox fx:id="comprehensiveCheck" text="Comprehensive - deductible" style="-fx-text-fill: #0b2237;" />
+                        <CheckBox fx:id="comprehensiveCheck" text="Comprehensive - deductible"
+                                  style="-fx-text-fill: #0b2237;"/>
                         <TextField fx:id="comprehensiveDeductibleField" promptText="Deductible Amount"/>
 
-                        <CheckBox fx:id="rrCheck" text="RR" style="-fx-text-fill: #0b2237;" />
-                        <CheckBox fx:id="teCheck" text="TE" style="-fx-text-fill: #0b2237;" />
+                        <CheckBox fx:id="rrCheck" text="RR" style="-fx-text-fill: #0b2237;"/>
+                        <CheckBox fx:id="teCheck" text="TE" style="-fx-text-fill: #0b2237;"/>
                     </VBox>
 
                     <!-- Advised of Service Expectations -->
-                    <Label text="Advised of Service Expectations:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                    <Label text="Advised of Service Expectations:"
+                           style="-fx-text-fill: #0b2237; -fx-font-weight: bold;"/>
                     <VBox spacing="5.0">
-                        <CheckBox fx:id="drpCheck" text="DRP" style="-fx-text-fill: #0b2237;" />
-                        <CheckBox fx:id="driveInCheck" text="Drive In - deductible" style="-fx-text-fill: #0b2237;" />
-                        <CheckBox fx:id="photoCheck" text="Photo" style="-fx-text-fill: #0b2237;" />
-                        <CheckBox fx:id="appraiserCheck" text="Appraiser" style="-fx-text-fill: #0b2237;" />
-                        <CheckBox fx:id="tleCheck" text="TLE" style="-fx-text-fill: #0b2237;" />
-                        <CheckBox fx:id="socCheck" text="SOC" style="-fx-text-fill: #0b2237;" />
-                        <CheckBox fx:id="rentalCheck" text="Rental" style="-fx-text-fill: #0b2237;" />
-                        <CheckBox fx:id="noServicesCheck" text="No services set" style="-fx-text-fill: #0b2237;" />
-                        <TextField fx:id="noServicesReason" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+                        <CheckBox fx:id="drpCheck" text="DRP" style="-fx-text-fill: #0b2237;"/>
+                        <CheckBox fx:id="driveInCheck" text="Drive In - deductible" style="-fx-text-fill: #0b2237;"/>
+                        <CheckBox fx:id="photoCheck" text="Photo" style="-fx-text-fill: #0b2237;"/>
+                        <CheckBox fx:id="appraiserCheck" text="Appraiser" style="-fx-text-fill: #0b2237;"/>
+                        <CheckBox fx:id="tleCheck" text="TLE" style="-fx-text-fill: #0b2237;"/>
+                        <CheckBox fx:id="socCheck" text="SOC" style="-fx-text-fill: #0b2237;"/>
+                        <CheckBox fx:id="rentalCheck" text="Rental" style="-fx-text-fill: #0b2237;"/>
+                        <CheckBox fx:id="noServicesCheck" text="No services set" style="-fx-text-fill: #0b2237;"/>
+                        <TextField fx:id="noServicesReason"
+                                   style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;"/>
                     </VBox>
 
                     <!-- Permission to Release Information -->
-                    <Label text="Permission to release information to AC (if applicable):" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                    <Label text="Permission to release information to AC (if applicable):"
+                           style="-fx-text-fill: #0b2237; -fx-font-weight: bold;"/>
                     <HBox spacing="10.0">
-                        <RadioButton fx:id="acYes" text="Yes" toggleGroup="$acGroup" style="-fx-text-fill: #0b2237;" />
-                        <RadioButton fx:id="acNo" text="No" toggleGroup="$acGroup" style="-fx-text-fill: #0b2237;" />
-                        <RadioButton fx:id="acNa" text="N/A" toggleGroup="$acGroup" style="-fx-text-fill: #0b2237;" />
-                        <TextField fx:id="acNaReason" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+                        <RadioButton fx:id="acYes" text="Yes" toggleGroup="$acGroup" style="-fx-text-fill: #0b2237;"/>
+                        <RadioButton fx:id="acNo" text="No" toggleGroup="$acGroup" style="-fx-text-fill: #0b2237;"/>
+                        <RadioButton fx:id="acNa" text="N/A" toggleGroup="$acGroup" style="-fx-text-fill: #0b2237;"/>
+                        <TextField fx:id="acNaReason" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;"/>
                     </HBox>
 
 
                     <!-- Service Expectations Summary -->
-                    <Label text="Service Expectations Summary:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                    <Label text="Service Expectations Summary:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;"/>
 
 
                     <!-- Advised Caller of Next Steps -->
-                    <Label text="Advised Caller of Next Steps:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                    <Label text="Advised Caller of Next Steps:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;"/>
                     <TextArea fx:id="serviceExpectationsArea"
                               wrapText="true"
                               focusTraversable="false"
                               prefHeight="120.0"
                               styleClass="auto-generated-text"
-                              style="-fx-background-color: transparent; -fx-control-inner-background: transparent; -fx-border-color: transparent; -fx-focus-color: transparent; -fx-faint-focus-color: transparent; -fx-text-fill: #0b2237" />
+                              style="-fx-background-color: transparent; -fx-control-inner-background: transparent; -fx-border-color: transparent; -fx-focus-color: transparent; -fx-faint-focus-color: transparent; -fx-text-fill: #0b2237"/>
 
 
-
-                    <Label text="Additional Expectations Set:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
-                    <TextArea fx:id="nextStepsArea" prefHeight="80.0" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+                    <Label text="Additional Expectations Set:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;"/>
+                    <TextArea fx:id="nextStepsArea" prefHeight="80.0"
+                              style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;"/>
 
                     <!-- Caller Advised -->
-                    <Label text="Caller Advised:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
-                    <TextArea fx:id="callerAdvisedArea" prefHeight="80.0" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+                    <Label text="Caller Advised:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;"/>
+                    <TextArea fx:id="callerAdvisedArea" prefHeight="80.0"
+                              style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;"/>
                 </VBox>
             </content>
         </ScrollPane>

@@ -23,7 +23,7 @@
                     </padding>
 
                     <!-- Spoke With -->
-                    <Label text="PROPERTY" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                    <Label text="PROPERTY FNOL" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
                     <Label text="Spoke with:" style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
                     <TextField fx:id="spokeWithField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
 
