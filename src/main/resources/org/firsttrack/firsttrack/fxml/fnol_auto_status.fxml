@@ -98,6 +98,38 @@
                             <TextArea fx:id="medicalProviderGeneralNoteField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
                         </VBox>
 
+                        <!-- Adverse Carrier Fields -->
+                        <VBox fx:id="adverseCarrierFields" spacing="10.0" visible="false" managed="false">
+
+                            <Label text="Carrier Name: " style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                            <TextField fx:id="adverseCarrierCarrierNameField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+
+                            <Label text="Handling Adjuster's Name: " style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                            <TextField fx:id="adverseCarrierAdjusterNameField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+
+                            <Label text="Claim Number: " style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                            <TextField fx:id="adverseCarrierClaimNumberField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+
+                            <Label text="Policy Number: " style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                            <TextField fx:id="adverseCarrierPolicyNumberField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+
+                            <Label text="Address: " style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                            <TextField fx:id="adverseCarrierAddressField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+
+                            <Label text="Fax Number: " style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                            <TextField fx:id="adverseCarrierFaxNumberField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+
+
+                            <Label text="Telephone Number: " style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                            <TextField fx:id="adverseCarrierTelephoneNumberField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+
+
+                            <Label text="Email Address: " style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                            <TextField fx:id="adverseCarrierEmailField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />s
+
+                            <Label text="Other Notes: " style="-fx-text-fill: #0b2237; -fx-font-weight: bold;" />
+                            <TextArea fx:id="adverseCarrierProviderGeneralNoteField" style="-fx-background-color: #ffffff; -fx-text-fill: #0b2237;" />
+                        </VBox>
 
                     </StackPane>
 

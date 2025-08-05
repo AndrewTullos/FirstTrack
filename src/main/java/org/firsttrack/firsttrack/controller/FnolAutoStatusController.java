@@ -13,6 +13,7 @@ public class FnolAutoStatusController implements NoteFormController {
     @FXML private VBox defaultFields;
     @FXML private VBox attorneyFields;
     @FXML private VBox medicalFields;
+    @FXML private VBox adverseCarrierFields;
 
 //    Default VBOX
     @FXML private TextField spokeWithField;
@@ -29,7 +30,7 @@ public class FnolAutoStatusController implements NoteFormController {
     @FXML private TextField attorneyTaxIdField;
     @FXML private TextArea attorneyGeneralNoteField;
 
-//    Medical Provider VBOX
+    //    Medical Provider VBOX
     @FXML private TextField medicalCallerField;
     @FXML private TextField medicalReasonField;
     @FXML private TextField medicalInformationField;
@@ -37,6 +38,17 @@ public class FnolAutoStatusController implements NoteFormController {
     @FXML private TextField medicalProviderActionsTakenField;
     @FXML private TextField medicalProviderNextStepsField;
     @FXML private TextArea medicalProviderGeneralNoteField;
+
+    //    Adverse Carrier VBOX
+    @FXML private TextField adverseCarrierCarrierNameField;
+    @FXML private TextField adverseCarrierAdjusterNameField;
+    @FXML private TextField adverseCarrierClaimNumberField;
+    @FXML private TextField adverseCarrierPolicyNumberField;
+    @FXML private TextField adverseCarrierAddressField;
+    @FXML private TextField adverseCarrierFaxNumberField;
+    @FXML private TextField adverseCarrierTelephoneNumberField;
+    @FXML private TextField adverseCarrierEmailField;
+    @FXML private TextArea adverseCarrierProviderGeneralNoteField;
 
     @FXML
     public void initialize() {
@@ -56,6 +68,7 @@ public class FnolAutoStatusController implements NoteFormController {
         defaultFields.setVisible(false); defaultFields.setManaged(false);
         attorneyFields.setVisible(false); attorneyFields.setManaged(false);
         medicalFields.setVisible(false); medicalFields.setManaged(false);
+        adverseCarrierFields.setVisible(false); adverseCarrierFields.setManaged(false);
 
         switch (selected) {
             case "Attorney":
@@ -128,6 +141,34 @@ public class FnolAutoStatusController implements NoteFormController {
             note.append("Notes: ").append(medicalProviderGeneralNoteField.getText().trim()).append("\n");
             note.append("\n");
 
+        } else if ("Adverse Carrier".equals(fnolType)) {
+            note.append("Carrier Name: ").append(adverseCarrierCarrierNameField.getText().trim()).append("\n");
+            note.append("\n");
+
+            note.append("Handling Adjuster's Name: ").append(adverseCarrierAdjusterNameField.getText().trim()).append("\n");
+            note.append("\n");
+
+            note.append("Claim Number: ").append(adverseCarrierClaimNumberField.getText().trim()).append("\n");
+            note.append("\n");
+
+            note.append("Policy Number: ").append(adverseCarrierPolicyNumberField.getText().trim()).append("\n");
+            note.append("\n");
+
+            note.append("Address: ").append(adverseCarrierAddressField.getText().trim()).append("\n");
+            note.append("\n");
+
+            note.append("Fax Number: ").append(adverseCarrierFaxNumberField.getText().trim()).append("\n");
+            note.append("\n");
+
+            note.append("Telephone Number: ").append(adverseCarrierTelephoneNumberField.getText().trim()).append("\n");
+            note.append("\n");
+
+            note.append("Email Address: ").append(adverseCarrierEmailField.getText().trim()).append("\n");
+            note.append("\n");
+
+            note.append("Notes: ").append(adverseCarrierProviderGeneralNoteField.getText().trim()).append("\n");
+            note.append("\n");
+
         } else {
             note.append("************************ FNOL AUTO STATUS ************************\n\n");
             note.append("\n");
@@ -164,5 +205,17 @@ public class FnolAutoStatusController implements NoteFormController {
         medicalProviderActionsTakenField.clear();
         medicalProviderNextStepsField.clear();
         medicalProviderGeneralNoteField.clear();
+
+
+//        ADVERSE CARRIER CLEAR
+        adverseCarrierCarrierNameField.clear();
+        adverseCarrierAdjusterNameField.clear();
+        adverseCarrierClaimNumberField.clear();
+        adverseCarrierPolicyNumberField.clear();
+        adverseCarrierAddressField.clear();
+        adverseCarrierFaxNumberField.clear();
+        adverseCarrierTelephoneNumberField.clear();
+        adverseCarrierEmailField.clear();
+        adverseCarrierProviderGeneralNoteField.clear();
     }
 }
